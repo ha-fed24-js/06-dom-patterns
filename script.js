@@ -12,6 +12,7 @@ function addBooks(books) {
 		const cardTitle = document.createElement('h3')
 		const cardAuthor = document.createElement('p')
 		const cardPrice = document.createElement('p')
+		const borrowButton = document.createElement('button')
 
 		// Lägg till innehåll till elementen
 		card.classList.add('card')
@@ -19,11 +20,18 @@ function addBooks(books) {
 		cardTitle.innerText = book.title
 		cardAuthor.innerText = book.author
 		cardPrice.innerText = book.price
+		borrowButton.innerText = 'Låna'
+
+		borrowButton.addEventListener('click', () => {
+			// Ta bort hela "card" när man klickar
+			card.remove()
+		})
 
 		// Lägg in element i parent
 		card.append(cardTitle)
 		card.append(cardAuthor)
 		card.append(cardPrice)
+		card.append(borrowButton)
 
 		// Lägg till "card" på sidan
 		cardGrid.append(card)
