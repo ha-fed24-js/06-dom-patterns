@@ -1,0 +1,13 @@
+.card-grid {
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.card {
+	border: 1px solid black;
+	border-radius: 0.5em;
+	margin: 0.25em;
+	padding: 0.25em;
+	/* width: 12em; */
+}
