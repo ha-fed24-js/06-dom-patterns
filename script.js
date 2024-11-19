@@ -60,3 +60,42 @@ cardPriceButton.addEventListener('click', () => {
 	cardGrid.innerHTML = ''
 	addBooks(expensiveBooks)
 })
+
+
+
+const tabs = Array.from( document.querySelectorAll('.tabs .tab') )
+const tabContentList = Array.from( document.querySelectorAll('.tab-content-container .tab-content') )
+
+tabs.forEach((tab, index) => {
+	tab.addEventListener('click', () => {
+		// Toggla synlighet, toggla markering på fliken
+		hideAllContent()
+		tabContentList[index].classList.remove('hidden')
+		deselectTabs()
+		tab.classList.add('active')
+	})
+})
+function hideAllContent() {
+	tabContentList.forEach(content => {
+		content.classList.add('hidden')
+	})
+}
+function deselectTabs() {
+	tabs.forEach(tab => {
+		tab.classList.remove('active')
+	})
+}
+/*
+startTab.addEventListener('click', () => {
+	tabContentList[0].classList.remove('hidden')
+	tabContentList[1].classList.add('hidden')
+	calendarTab.classList.remove('active')
+	startTab.classList.add('active')
+})
+calendarTab.addEventListener('click', () => {
+	tabContentList[0].classList.add('hidden')
+	tabContentList[1].classList.remove('hidden')
+	calendarTab.classList.add('active')
+	startTab.classList.remove('active')
+})
+*/

@@ -10,6 +10,20 @@
 <body>
 	<h1> DOM designmönster</h1>
 
+	<h2> Flikar </h2>
+	<nav>
+		<ul class="tabs">
+			<li class="tab active"> Start </li>
+			<li class="tab"> Kalender </li>
+			<li class="tab"> Öppettider </li>
+		</ul>
+	</nav>
+	<div class="tab-content-container">
+		<div class="tab-content"> Välkommen till Handelsakademin! </div>
+		<div class="tab-content hidden"> Här kan du se alla spännande event vi ordnar. </div>
+		<div class="tab-content hidden"> Våra öppettider är: dygnet runt. </div>
+	</div>
+
 	<section>
 		<h2> Alla deckare </h2>
 		<button id="card-price-button"> Öka priset med 10% </button>

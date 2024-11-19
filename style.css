@@ -11,3 +11,33 @@
 	padding: 0.25em;
 	/* width: 12em; */
 }
+
+
+.tabs {
+	display: flex;
+	list-style-type: none;
+	background-color: rgb(253, 154, 204);
+	padding: 0;
+	margin: 0;
+}
+.tabs .tab {
+	border: 1px solid rgb(132, 43, 87);
+	margin: 0.2em;
+	padding: 0.5em 1.2em;
+	cursor: pointer;
+	/* flex-grow: 1;
+	flex-basis: 0; */
+}
+.tabs .tab.active {
+	background-color: rgb(240, 202, 221);
+}
+.tab-content-container {
+	border: 1px solid black;
+	min-height: 8em;
+}
+.tab-content {
+	padding: 0.5em;
+}
+.tab-content.hidden {
+	display: none;
+}
