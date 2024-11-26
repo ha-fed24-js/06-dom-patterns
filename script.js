@@ -99,3 +99,26 @@ calendarTab.addEventListener('click', () => {
 	startTab.classList.remove('active')
 })
 */
+
+
+const showDialog = document.querySelector('#show-dialog')
+const closeDialogButton = document.querySelector('#close-dialog')
+const dialog = document.querySelector('dialog')
+const dialogContainer = document.querySelector('.dialog-container')
+
+dialog.addEventListener('click', event => {
+	event.stopPropagation()
+})
+showDialog.addEventListener('click', () => {
+	dialogContainer.classList.remove('hide')
+	dialog.show()
+})
+closeDialogButton.addEventListener('click', closeDialog)
+dialogContainer.addEventListener('click', closeDialog)
+
+function closeDialog() {
+	dialog.close()
+	dialogContainer.classList.add('hide')
+}
+
+dialog.show()

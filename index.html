@@ -10,6 +10,18 @@
 <body>
 	<h1> DOM designmönster</h1>
 
+	<div class="dialog-container hide">
+		<dialog>
+			<p>Dialog</p>
+			<button id="close-dialog"> Stäng </button>
+		</dialog>
+	</div>
+
+	<div>
+		<button id="show-dialog"> Visa dialog </button>
+	</div>
+
+
 	<h2> Flikar </h2>
 	<nav>
 		<ul class="tabs">
@@ -17,7 +29,7 @@
 			<li class="tab"> Kalender </li>
 			<li class="tab"> Öppettider </li>
 		</ul>
-	</nav>
+	</nav>	
 	<div class="tab-content-container">
 		<div class="tab-content"> Välkommen till Handelsakademin! </div>
 		<div class="tab-content hidden"> Här kan du se alla spännande event vi ordnar. </div>
